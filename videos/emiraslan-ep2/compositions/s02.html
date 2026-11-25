@@ -1,0 +1,121 @@
+<template>
+  <style>
+    
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-ext-800-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+  
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0d1328; }
+    #s02-clip { position: absolute; inset: 0; }
+    #s02-cam { position: absolute; inset: 0; }
+    #s02-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    
+  .comic {
+    position: absolute; font-family: "AmrComic", sans-serif; color: #ffd84a; opacity: 0;
+    -webkit-text-stroke: 10px #120d0a; paint-order: stroke fill; letter-spacing: 0.02em;
+    text-shadow: 8px 8px 0 #120d0a; white-space: nowrap; line-height: 1;
+  }
+  .caption-box {
+    position: absolute; background: #f3d54a; color: #15110d; font-family: "AmrComic", sans-serif;
+    font-size: 30px; padding: 12px 22px; border: 5px solid #15110d; box-shadow: 7px 7px 0 #15110d;
+    letter-spacing: 0.04em; opacity: 0; white-space: nowrap;
+  }
+
+    
+  </style>
+  <div id="root" data-composition-id="s02" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s02-clip" class="clip" data-start="0" data-duration="7" data-track-index="0">
+      <div id="s02-cam">
+        <svg id="s02-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="s02-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d3f6c"/><stop offset=".55" stop-color="#d98a5e"/><stop offset="1" stop-color="#f3c27a"/></linearGradient>
+    <radialGradient id="s02-glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient></defs>
+          
+    <rect width="1920" height="1080" fill="url(#s02-sky)"/>
+    <rect id="s02-night" width="1920" height="1080" fill="#0d1328"/>
+    <circle id="s02-sun" cx="1260" cy="900" r="110" fill="#ffd27a"/>
+    <circle id="s02-sunglow" cx="1260" cy="900" r="300" fill="url(#s02-glow)"/>
+    <path d="M 0,820 C 300,740 600,780 900,750 C 1200,720 1500,790 1920,740 L 1920,1080 L 0,1080 Z" fill="#3b4a38"/>
+    <path d="M 40,880 L 40,760 L 180,710 L 320,760 L 320,880 Z" fill="#2f3a2c"/><rect x="62" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="105" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="148" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="191" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="234" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="277" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><path d="M 370,880 L 370,730 L 510,680 L 650,730 L 650,880 Z" fill="#2f3a2c"/><rect x="392" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="435" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="478" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="521" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="564" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="607" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><path d="M 700,880 L 700,700 L 840,650 L 980,700 L 980,880 Z" fill="#2f3a2c"/><rect x="722" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="765" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="808" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="851" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="894" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="937" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><path d="M 1030,880 L 1030,760 L 1170,710 L 1310,760 L 1310,880 Z" fill="#2f3a2c"/><rect x="1052" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1095" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1138" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1181" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1224" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1267" y="790" width="22" height="28" fill="#2c2a2e" class="s02-win"/><path d="M 1360,880 L 1360,730 L 1500,680 L 1640,730 L 1640,880 Z" fill="#2f3a2c"/><rect x="1382" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1425" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1468" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1511" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1554" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1597" y="760" width="22" height="28" fill="#2c2a2e" class="s02-win"/><path d="M 1690,880 L 1690,700 L 1830,650 L 1970,700 L 1970,880 Z" fill="#2f3a2c"/><rect x="1712" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1755" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1798" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1841" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1884" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/><rect x="1927" y="730" width="22" height="28" fill="#2c2a2e" class="s02-win"/>
+    <rect x="0" y="878" width="1920" height="210" fill="#4a5146"/>
+    <rect x="0" y="878" width="1920" height="10" fill="#5d6458"/>
+    <g transform="translate(560,330)">
+    <rect x="-5" y="0" width="10" height="560" fill="#8d8a84"/><circle cx="0" cy="-6" r="10" fill="#d6b45a"/>
+    <g id="s02f-wave" transform="translate(5,10)">
+    <g id="s02f-flag">
+      <rect x="0" y="0" width="300" height="50" fill="#0092bc"/>
+      <rect x="0" y="50" width="300" height="50" fill="#e4002b"/>
+      <rect x="0" y="100" width="300" height="50" fill="#00af66"/>
+      <circle cx="141" cy="75" r="18" fill="#fff"/>
+      <circle cx="147" cy="75" r="15" fill="#e4002b"/>
+      <polygon points="169.5,66.5 171.0,71.5 175.5,69.0 173.0,73.5 178.0,75.0 173.0,76.5 175.5,81.0 171.0,78.5 169.5,83.5 168.0,78.5 163.5,81.0 166.0,76.5 161.0,75.0 166.0,73.5 163.5,69.0 168.0,71.5" fill="#fff"/>
+    </g></g>
+  </g>
+    <path class="s02-bird" d="M -144.87473329529166,328.407867718488 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -199.00719724595547,324.63811106979847 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -274.58288720808923,407.6556650083512 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -347.8148702159524,380.7899108156562 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -429.78988505899906,301.982647664845 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -474.29215361364186,316.12643170170486 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/><path class="s02-bird" d="M -547.3152528796345,359.7369449492544 q 12,-12 24,0 q 12,-12 24,0" stroke="#2a2522" stroke-width="4" fill="none"/>
+        </svg>
+        <div id="s02-cap" class="caption-box" style="left:150px; top:150px; font-family:'AmrSub'; font-weight:800;">SƏHƏR. HƏRBİ HİSSƏ.</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      
+  const $ = (s) => document.querySelector(s);
+  const MOUTHS = ["closed", "open", "shout", "smile", "smirk", "yawn"];
+  function mouth(tl, p, state, t) {
+    MOUTHS.forEach(function (m) {
+      const el = document.getElementById(p + "-m-" + m);
+      if (el) tl.set(el, { opacity: m === state ? 1 : 0 }, t);
+    });
+  }
+  // Lip flap between two states; offsets vary so it never reads as a metronome.
+  function talk(tl, p, t0, t1, open, rest) {
+    open = open || "open"; rest = rest || "closed";
+    const steps = [0.11, 0.09, 0.14, 0.08, 0.12, 0.1, 0.16, 0.09];
+    let t = t0, i = 0, on = true;
+    while (t < t1 - 0.05) { mouth(tl, p, on ? open : rest, t); t += steps[i % steps.length]; i++; on = !on; }
+    mouth(tl, p, rest, t1);
+  }
+  function blink(tl, p, t) {
+    ["L", "R"].forEach(function (s) {
+      const e = document.getElementById(p + "-eye" + s);
+      if (!e) return;
+      tl.to(e, { scaleY: 0.08, transformOrigin: "50% 50%", duration: 0.06, ease: "power2.in" }, t);
+      tl.to(e, { scaleY: 1, transformOrigin: "50% 50%", duration: 0.08, ease: "power2.out" }, t + 0.07);
+    });
+  }
+  function look(tl, p, dx, dy, t, d) {
+    tl.to("." + p + "-pupil", { x: dx, y: dy, duration: d || 0.18, ease: "power2.out" }, t);
+  }
+  function shake(tl, sel, t, amp, n) {
+    amp = amp || 14; n = n || 8;
+    for (let i = 0; i < n; i++) {
+      const k = 1 - i / n, sx = (i % 2 ? -1 : 1) * amp * k, sy = ((i * 7) % 3 - 1) * amp * 0.6 * k;
+      tl.to(sel, { x: sx, y: sy, duration: 0.035, ease: "none" }, t + i * 0.035);
+    }
+    tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "power2.out" }, t + n * 0.035);
+  }
+  // Comic word: pops in big with overshoot, holds, then punches out.
+  function pow(tl, sel, t, hold, rot) {
+    tl.fromTo(sel, { scale: 0.2, opacity: 0, rotation: (rot || -8) - 14 }, { scale: 1, opacity: 1, rotation: rot || -8, duration: 0.28, ease: "back.out(2.2)" }, t);
+    tl.to(sel, { scale: 1.25, opacity: 0, duration: 0.18, ease: "power2.in" }, t + (hold || 1));
+  }
+
+      const tl = gsap.timeline({ paused: true });
+      
+    tl.fromTo("#s02-night", { opacity: 0.85 }, { opacity: 0, duration: 5, ease: "power2.inOut" }, 0);
+    tl.fromTo(["#s02-sun", "#s02-sunglow"], { y: 120 }, { y: -260, duration: 7, ease: "power1.out" }, 0);
+    tl.fromTo(".s02-win", { fill: "#2c2a2e" }, { fill: "#ffd98a", duration: 0.2, stagger: 0.12, ease: "none" }, 1.2);
+    tl.fromTo(".s02-bird", { x: 0 }, { x: 2300, duration: 6.5, ease: "none", stagger: 0.15 }, 0.3);
+    tl.fromTo("#s02f-wave", { skewY: -3 }, { skewY: 3, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: 10, transformOrigin: "0% 50%" }, 0);
+    tl.fromTo("#s02-cap", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 1.0);
+    tl.to("#s02-cap", { opacity: 0, duration: 0.3, ease: "power2.in" }, 5.6);
+    tl.fromTo("#s02-cam", { scale: 1.08, transformOrigin: "50% 60%" }, { scale: 1, duration: 7, ease: "power1.inOut" }, 0);
+      window.__timelines["s02"] = tl;
+    })();
+  </script>
+</template>

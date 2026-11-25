@@ -1,0 +1,26 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #frame-clip { position: absolute; inset: 0; }
+    #frame-grain { position: absolute; left: -64px; top: -64px; width: 2048px; height: 1208px; background-image: url("assets/grain.png"); background-size: 256px 256px; opacity: 0.16; mix-blend-mode: overlay; }
+    #frame-vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 58%, rgba(0,0,0,.5) 100%); }
+    .frame-bar { position: absolute; left: 0; width: 1920px; height: 96px; background: #000; }
+  </style>
+  <div id="root" data-composition-id="frame" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div id="frame-clip" class="clip" data-start="0" data-duration="146" data-track-index="0">
+      <div id="frame-grain"></div>
+      <div id="frame-vig"></div>
+      <div id="frame-top" class="frame-bar" style="top:0"></div>
+      <div id="frame-bot" class="frame-bar" style="bottom:0"></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // Grain boils at 12 fps: a stepped jump every 1/12 s, deterministic.
+      const steps = Math.round(146 * 12);
+      tl.fromTo("#frame-grain", { x: 0, y: 0 }, { x: 48, y: 32, duration: 146, ease: "steps(" + steps + ")" }, 0);
+      window.__timelines["frame"] = tl;
+    })();
+  </script>
+</template>

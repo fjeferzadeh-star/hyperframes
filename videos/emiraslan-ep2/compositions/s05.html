@@ -1,0 +1,156 @@
+<template>
+  <style>
+    
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-ext-800-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+  
+    #root { position: absolute; inset: 0; overflow: hidden; background: #5c605a; }
+    #s05-clip { position: absolute; inset: 0; }
+    #s05-cam { position: absolute; inset: 0; }
+    #s05-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    
+  .comic {
+    position: absolute; font-family: "AmrComic", sans-serif; color: #ffd84a; opacity: 0;
+    -webkit-text-stroke: 10px #120d0a; paint-order: stroke fill; letter-spacing: 0.02em;
+    text-shadow: 8px 8px 0 #120d0a; white-space: nowrap; line-height: 1;
+  }
+  .caption-box {
+    position: absolute; background: #f3d54a; color: #15110d; font-family: "AmrComic", sans-serif;
+    font-size: 30px; padding: 12px 22px; border: 5px solid #15110d; box-shadow: 7px 7px 0 #15110d;
+    letter-spacing: 0.04em; opacity: 0; white-space: nowrap;
+  }
+
+    
+  </style>
+  <div id="root" data-composition-id="s05" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s05-clip" class="clip" data-start="0" data-duration="4" data-track-index="0">
+      <div id="s05-cam">
+        <svg id="s05-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          
+    <rect width="1920" height="1080" fill="#5c605a"/>
+    <rect y="840" width="1920" height="240" fill="#4a4e48"/>
+    <g class="s05-pair">
+      <path d="M 60,300 L 130,300 L 124,760 L 66,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 0,300 L 70,300 L 64,760 L 6,760 Z" fill="#47523a"/>
+      <path d="M 0,740 L 70,740 L 74,840 L -36,840 C -36,800 -20,760 0,740 Z" fill="#15120f"/></g>
+      <path d="M 60,740 L 130,740 L 166,840 L 56,840 C 56,800 60,760 60,740 Z" fill="#15120f"/>
+      <path d="M 80,770 L 120,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 275,300 L 345,300 L 339,760 L 281,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 215,300 L 285,300 L 279,760 L 221,760 Z" fill="#47523a"/>
+      <path d="M 215,740 L 285,740 L 289,840 L 179,840 C 179,800 195,760 215,740 Z" fill="#15120f"/></g>
+      <path d="M 275,740 L 345,740 L 381,840 L 271,840 C 271,800 275,760 275,740 Z" fill="#15120f"/>
+      <path d="M 295,770 L 335,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 490,300 L 560,300 L 554,760 L 496,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 430,300 L 500,300 L 494,760 L 436,760 Z" fill="#47523a"/>
+      <path d="M 430,740 L 500,740 L 504,840 L 394,840 C 394,800 410,760 430,740 Z" fill="#15120f"/></g>
+      <path d="M 490,740 L 560,740 L 596,840 L 486,840 C 486,800 490,760 490,740 Z" fill="#15120f"/>
+      <path d="M 510,770 L 550,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 705,300 L 775,300 L 769,760 L 711,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 645,300 L 715,300 L 709,760 L 651,760 Z" fill="#47523a"/>
+      <path d="M 645,740 L 715,740 L 719,840 L 609,840 C 609,800 625,760 645,740 Z" fill="#15120f"/></g>
+      <path d="M 705,740 L 775,740 L 811,840 L 701,840 C 701,800 705,760 705,740 Z" fill="#15120f"/>
+      <path d="M 725,770 L 765,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 920,300 L 990,300 L 984,760 L 926,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 860,300 L 930,300 L 924,760 L 866,760 Z" fill="#47523a"/>
+      <path d="M 860,740 L 930,740 L 934,840 L 824,840 C 824,800 840,760 860,740 Z" fill="#15120f"/></g>
+      <path d="M 920,740 L 990,740 L 1026,840 L 916,840 C 916,800 920,760 920,740 Z" fill="#15120f"/>
+      <path d="M 940,770 L 980,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 1135,300 L 1205,300 L 1199,760 L 1141,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 1075,300 L 1145,300 L 1139,760 L 1081,760 Z" fill="#47523a"/>
+      <path d="M 1075,740 L 1145,740 L 1149,840 L 1039,840 C 1039,800 1055,760 1075,740 Z" fill="#15120f"/></g>
+      <path d="M 1135,740 L 1205,740 L 1241,840 L 1131,840 C 1131,800 1135,760 1135,740 Z" fill="#15120f"/>
+      <path d="M 1155,770 L 1195,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 1350,300 L 1420,300 L 1414,760 L 1356,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 1290,300 L 1360,300 L 1354,760 L 1296,760 Z" fill="#47523a"/>
+      <path d="M 1290,740 L 1360,740 L 1364,840 L 1254,840 C 1254,800 1270,760 1290,740 Z" fill="#15120f"/></g>
+      <path d="M 1350,740 L 1420,740 L 1456,840 L 1346,840 C 1346,800 1350,760 1350,740 Z" fill="#15120f"/>
+      <path d="M 1370,770 L 1410,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 1565,300 L 1635,300 L 1629,760 L 1571,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 1505,300 L 1575,300 L 1569,760 L 1511,760 Z" fill="#47523a"/>
+      <path d="M 1505,740 L 1575,740 L 1579,840 L 1469,840 C 1469,800 1485,760 1505,740 Z" fill="#15120f"/></g>
+      <path d="M 1565,740 L 1635,740 L 1671,840 L 1561,840 C 1561,800 1565,760 1565,740 Z" fill="#15120f"/>
+      <path d="M 1585,770 L 1625,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g><g class="s05-pair">
+      <path d="M 1780,300 L 1850,300 L 1844,760 L 1786,760 Z" fill="#47523a"/>
+      <g class="s05-l"><path d="M 1720,300 L 1790,300 L 1784,760 L 1726,760 Z" fill="#47523a"/>
+      <path d="M 1720,740 L 1790,740 L 1794,840 L 1684,840 C 1684,800 1700,760 1720,740 Z" fill="#15120f"/></g>
+      <path d="M 1780,740 L 1850,740 L 1886,840 L 1776,840 C 1776,800 1780,760 1780,740 Z" fill="#15120f"/>
+      <path d="M 1800,770 L 1840,770" stroke="#fff" stroke-width="3" opacity=".25"/>
+    </g>
+    <g id="s05-dust"><ellipse cx="80" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="295" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="510" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="725" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="940" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="1155" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="1370" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="1585" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/><ellipse cx="1800" cy="840" rx="70" ry="20" fill="#c9c2b0" opacity="0"/></g>
+        </svg>
+        <div id="s05-pow" class="comic" style="left:560px; top:330px; font-size:230px;">ŞAQQ!</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      
+  const $ = (s) => document.querySelector(s);
+  const MOUTHS = ["closed", "open", "shout", "smile", "smirk", "yawn"];
+  function mouth(tl, p, state, t) {
+    MOUTHS.forEach(function (m) {
+      const el = document.getElementById(p + "-m-" + m);
+      if (el) tl.set(el, { opacity: m === state ? 1 : 0 }, t);
+    });
+  }
+  // Lip flap between two states; offsets vary so it never reads as a metronome.
+  function talk(tl, p, t0, t1, open, rest) {
+    open = open || "open"; rest = rest || "closed";
+    const steps = [0.11, 0.09, 0.14, 0.08, 0.12, 0.1, 0.16, 0.09];
+    let t = t0, i = 0, on = true;
+    while (t < t1 - 0.05) { mouth(tl, p, on ? open : rest, t); t += steps[i % steps.length]; i++; on = !on; }
+    mouth(tl, p, rest, t1);
+  }
+  function blink(tl, p, t) {
+    ["L", "R"].forEach(function (s) {
+      const e = document.getElementById(p + "-eye" + s);
+      if (!e) return;
+      tl.to(e, { scaleY: 0.08, transformOrigin: "50% 50%", duration: 0.06, ease: "power2.in" }, t);
+      tl.to(e, { scaleY: 1, transformOrigin: "50% 50%", duration: 0.08, ease: "power2.out" }, t + 0.07);
+    });
+  }
+  function look(tl, p, dx, dy, t, d) {
+    tl.to("." + p + "-pupil", { x: dx, y: dy, duration: d || 0.18, ease: "power2.out" }, t);
+  }
+  function shake(tl, sel, t, amp, n) {
+    amp = amp || 14; n = n || 8;
+    for (let i = 0; i < n; i++) {
+      const k = 1 - i / n, sx = (i % 2 ? -1 : 1) * amp * k, sy = ((i * 7) % 3 - 1) * amp * 0.6 * k;
+      tl.to(sel, { x: sx, y: sy, duration: 0.035, ease: "none" }, t + i * 0.035);
+    }
+    tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "power2.out" }, t + n * 0.035);
+  }
+  // Comic word: pops in big with overshoot, holds, then punches out.
+  function pow(tl, sel, t, hold, rot) {
+    tl.fromTo(sel, { scale: 0.2, opacity: 0, rotation: (rot || -8) - 14 }, { scale: 1, opacity: 1, rotation: rot || -8, duration: 0.28, ease: "back.out(2.2)" }, t);
+    tl.to(sel, { scale: 1.25, opacity: 0, duration: 0.18, ease: "power2.in" }, t + (hold || 1));
+  }
+
+      const tl = gsap.timeline({ paused: true });
+      
+    tl.fromTo(".s05-l", { x: -90 }, { x: -90, duration: 0.01 }, 0);
+    tl.to(".s05-l", { x: 0, duration: 0.14, ease: "power4.in", stagger: 0.012 }, 0.4);
+    tl.fromTo("#s05-dust ellipse", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 0.7, scale: 1.5, duration: 0.3, ease: "expo.out" }, 0.55);
+    tl.to("#s05-dust ellipse", { opacity: 0, duration: 0.6, ease: "power2.in" }, 0.85);
+    pow(tl, "#s05-pow", 0.55, 2.4, -5);
+    shake(tl, "#s05-cam", 0.55, 18, 8);
+    tl.fromTo("#s05-cam", { scale: 1, transformOrigin: "50% 80%" }, { scale: 1.06, duration: 3.4, ease: "power1.out" }, 0.6);
+      window.__timelines["s05"] = tl;
+    })();
+  </script>
+</template>

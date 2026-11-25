@@ -1,0 +1,95 @@
+<template>
+  <style>
+    
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-ext-800-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+  
+    #root { position: absolute; inset: 0; pointer-events: none; }
+        .sub-g { position: absolute; left: 0; right: 0; bottom: 112px; text-align: center; overflow: visible; }
+    .sub-in { opacity: 0; }
+    .sub-who { font-family: "AmrSub"; font-weight: 800; font-size: 22px; letter-spacing: 0.2em; margin-bottom: 4px; -webkit-text-stroke: 5px #000; paint-order: stroke fill; }
+    .sub-txt { font-family: "AmrSub"; font-weight: 800; font-size: 50px; color: #fff; -webkit-text-stroke: 8px #000; paint-order: stroke fill; text-shadow: 0 4px 10px rgba(0,0,0,.6); }
+  </style>
+  <div id="root" data-composition-id="subs" data-width="1920" data-height="1080">
+
+    <div id="sub-0" class="clip sub-g" data-start="25" data-duration="1.40" data-track-index="0"><div id="sub-0-in" class="sub-in">
+      <div class="sub-who" style="color:#9fd36a">KOMANDİR</div>
+      <div class="sub-txt">Düzlən!</div>
+    </div></div>
+    <div id="sub-1" class="clip sub-g" data-start="27.8" data-duration="1.80" data-track-index="0"><div id="sub-1-in" class="sub-in">
+      <div class="sub-who" style="color:#9fd36a">KOMANDİR</div>
+      <div class="sub-txt">Farağat!</div>
+    </div></div>
+    <div id="sub-2" class="clip sub-g" data-start="35.6" data-duration="1.90" data-track-index="0"><div id="sub-2-in" class="sub-in">
+      <div class="sub-who" style="color:#9fd36a">KOMANDİR</div>
+      <div class="sub-txt">Salam, əsgər!</div>
+    </div></div>
+    <div id="sub-3" class="clip sub-g" data-start="38.3" data-duration="2.30" data-track-index="0"><div id="sub-3-in" class="sub-in">
+      <div class="sub-who" style="color:#9fd36a">ŞƏXSİ HEYƏT</div>
+      <div class="sub-txt">SAĞ OL!</div>
+    </div></div>
+    <div id="sub-4" class="clip sub-g" data-start="80" data-duration="2.20" data-track-index="0"><div id="sub-4-in" class="sub-in">
+      <div class="sub-who" style="color:#8fc7ff">TELEFON</div>
+      <div class="sub-txt">Salam, Əmiraslan, necəsən?</div>
+    </div></div>
+    <div id="sub-5" class="clip sub-g" data-start="82.4" data-duration="2.20" data-track-index="0"><div id="sub-5-in" class="sub-in">
+      <div class="sub-who" style="color:#ffd84a">ƏMİRASLAN</div>
+      <div class="sub-txt">Çox sağ ol, sən necəsən?</div>
+    </div></div>
+    <div id="sub-6" class="clip sub-g" data-start="84.8" data-duration="1.40" data-track-index="0"><div id="sub-6-in" class="sub-in">
+      <div class="sub-who" style="color:#8fc7ff">TELEFON</div>
+      <div class="sub-txt">İşdəsən?</div>
+    </div></div>
+    <div id="sub-7" class="clip sub-g" data-start="86.8" data-duration="1.80" data-track-index="0"><div id="sub-7-in" class="sub-in">
+      <div class="sub-who" style="color:#ffd84a">ƏMİRASLAN</div>
+      <div class="sub-txt">Hə, işdəyəm...</div>
+    </div></div>
+    <div id="sub-8" class="clip sub-g" data-start="89" data-duration="1.80" data-track-index="0"><div id="sub-8-in" class="sub-in">
+      <div class="sub-who" style="color:#8fc7ff">TELEFON</div>
+      <div class="sub-txt">Yaxşı, işdə ol.</div>
+    </div></div>
+    <div id="sub-9" class="clip sub-g" data-start="117.2" data-duration="3.40" data-track-index="0"><div id="sub-9-in" class="sub-in">
+      <div class="sub-who" style="color:#ff9ab0">QIZ</div>
+      <div class="sub-txt">Kömək edin! Kömək edin!</div>
+    </div></div>
+    <div id="sub-10" class="clip sub-g" data-start="134.6" data-duration="3.30" data-track-index="0"><div id="sub-10-in" class="sub-in">
+      <div class="sub-who" style="color:#ff9ab0">QIZ</div>
+      <div class="sub-txt">Çox sağ ol, mənim qəhrəmanım!</div>
+    </div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#sub-0-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 25);
+      tl.to("#sub-0-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 26.23);
+      tl.fromTo("#sub-1-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 27.8);
+      tl.to("#sub-1-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 29.43);
+      tl.fromTo("#sub-2-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 35.6);
+      tl.to("#sub-2-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 37.33);
+      tl.fromTo("#sub-3-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 38.3);
+      tl.to("#sub-3-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 40.43);
+      tl.fromTo("#sub-4-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 80);
+      tl.to("#sub-4-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 82.03);
+      tl.fromTo("#sub-5-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 82.4);
+      tl.to("#sub-5-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 84.43);
+      tl.fromTo("#sub-6-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 84.8);
+      tl.to("#sub-6-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 86.03);
+      tl.fromTo("#sub-7-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 86.8);
+      tl.to("#sub-7-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 88.43);
+      tl.fromTo("#sub-8-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 89);
+      tl.to("#sub-8-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 90.63);
+      tl.fromTo("#sub-9-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 117.2);
+      tl.to("#sub-9-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 120.43);
+      tl.fromTo("#sub-10-in", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, 134.6);
+      tl.to("#sub-10-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 137.73);
+      tl.to({}, { duration: 146 }, 0);
+      window.__timelines["subs"] = tl;
+    })();
+  </script>
+</template>

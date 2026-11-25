@@ -1,0 +1,116 @@
+<template>
+  <style>
+    
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-ext-800-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+  
+    #root { position: absolute; inset: 0; overflow: hidden; background: #e59a62; }
+    #s12-clip { position: absolute; inset: 0; }
+    #s12-cam { position: absolute; inset: 0; }
+    #s12-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    
+  .comic {
+    position: absolute; font-family: "AmrComic", sans-serif; color: #ffd84a; opacity: 0;
+    -webkit-text-stroke: 10px #120d0a; paint-order: stroke fill; letter-spacing: 0.02em;
+    text-shadow: 8px 8px 0 #120d0a; white-space: nowrap; line-height: 1;
+  }
+  .caption-box {
+    position: absolute; background: #f3d54a; color: #15110d; font-family: "AmrComic", sans-serif;
+    font-size: 30px; padding: 12px 22px; border: 5px solid #15110d; box-shadow: 7px 7px 0 #15110d;
+    letter-spacing: 0.04em; opacity: 0; white-space: nowrap;
+  }
+
+    
+  </style>
+  <div id="root" data-composition-id="s12" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s12-clip" class="clip" data-start="0" data-duration="6" data-track-index="0">
+      <div id="s12-cam">
+        <svg id="s12-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="s12-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e59a62"/><stop offset="1" stop-color="#f5d9a8"/></linearGradient></defs>
+          
+    <rect width="1920" height="1080" fill="url(#s12-sky)"/>
+    <path d="M 0,560 C 400,520 800,560 1200,530 C 1500,510 1700,540 1920,520 L 1920,1080 L 0,1080 Z" fill="#5d7a48"/>
+    <path d="M 900,560 L 1020,560 L 1760,1080 L 160,1080 Z" fill="#3f4247"/>
+    <g id="s12-dash"><rect class="s12-d" x="955" y="600" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="670" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="740" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="810" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="880" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="950" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="1020" width="10" height="34" fill="#e9e2c6"/><rect class="s12-d" x="955" y="1090" width="10" height="34" fill="#e9e2c6"/></g>
+    <g transform="translate(960,820)"><g id="s12-rear"><g id="s12r-car">
+    <ellipse cx="0" cy="250" rx="420" ry="30" fill="#000" opacity=".35"/>
+    <rect x="-370" y="160" width="90" height="100" rx="14" fill="#141414"/><rect x="280" y="160" width="90" height="100" rx="14" fill="#141414"/>
+    <path d="M -400,40 C -400,0 -380,-20 -330,-30 L -240,-150 C -220,-180 220,-180 240,-150 L 330,-30 C 380,-20 400,0 400,40 L 400,190 C 400,215 380,225 360,225 L -360,225 C -380,225 -400,215 -400,190 Z" fill="#4a5058"/>
+    <path d="M -226,-140 C -210,-162 210,-162 226,-140 L 280,-44 L -280,-44 Z" fill="#27323d"/>
+    <g transform="translate(-90,-96) scale(0.3)"><path d="M -74,-40 C -78,-96 -45,-130 2,-130 C 48,-130 78,-100 74,-40 C 74,40 50,96 0,102 C -50,96 -74,40 -74,-40 Z" fill="#231a16"/></g>
+    <path d="M -390,0 L -150,14 L -150,44 L -394,34 Z" fill="#c42a2a"/><path d="M 390,0 L 150,14 L 150,44 L 394,34 Z" fill="#c42a2a"/>
+    <path d="M -150,26 L 150,26" stroke="#9aa1a8" stroke-width="6"/>
+    <text x="0" y="90" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="34" fill="#c9ced4" letter-spacing="8">FUSION</text>
+    <g transform="translate(0,150)">
+    <rect x="-115" y="-25.3" width="230" height="50.6" rx="5" fill="#f4f2ec" stroke="#1a1a1a" stroke-width="3"/>
+    <rect x="-110" y="-20.3" width="29.900000000000002" height="16.192" fill="#0092bc"/><rect x="-110" y="-4.1080000000000005" width="29.900000000000002" height="6.072" fill="#e4002b"/><rect x="-110" y="1.9639999999999986" width="29.900000000000002" height="6.072" fill="#00af66"/>
+    <text x="-95.05" y="20.3" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="15.18" fill="#0b2e7a">AZ</text>
+    <text x="16.1" y="12.144" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="33.396" fill="#111" letter-spacing="1">99-OS-663</text>
+  </g>
+  </g></g></g>
+    <g id="s12-notes"><text class="s12-note" x="900" y="660" font-size="60" fill="#ffd84a" stroke="#15110d" stroke-width="3" font-family="AmrSub">♪</text><text class="s12-note" x="960" y="660" font-size="60" fill="#ffd84a" stroke="#15110d" stroke-width="3" font-family="AmrSub">♫</text><text class="s12-note" x="1020" y="660" font-size="60" fill="#ffd84a" stroke="#15110d" stroke-width="3" font-family="AmrSub">♪</text></g>
+        </svg>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      
+  const $ = (s) => document.querySelector(s);
+  const MOUTHS = ["closed", "open", "shout", "smile", "smirk", "yawn"];
+  function mouth(tl, p, state, t) {
+    MOUTHS.forEach(function (m) {
+      const el = document.getElementById(p + "-m-" + m);
+      if (el) tl.set(el, { opacity: m === state ? 1 : 0 }, t);
+    });
+  }
+  // Lip flap between two states; offsets vary so it never reads as a metronome.
+  function talk(tl, p, t0, t1, open, rest) {
+    open = open || "open"; rest = rest || "closed";
+    const steps = [0.11, 0.09, 0.14, 0.08, 0.12, 0.1, 0.16, 0.09];
+    let t = t0, i = 0, on = true;
+    while (t < t1 - 0.05) { mouth(tl, p, on ? open : rest, t); t += steps[i % steps.length]; i++; on = !on; }
+    mouth(tl, p, rest, t1);
+  }
+  function blink(tl, p, t) {
+    ["L", "R"].forEach(function (s) {
+      const e = document.getElementById(p + "-eye" + s);
+      if (!e) return;
+      tl.to(e, { scaleY: 0.08, transformOrigin: "50% 50%", duration: 0.06, ease: "power2.in" }, t);
+      tl.to(e, { scaleY: 1, transformOrigin: "50% 50%", duration: 0.08, ease: "power2.out" }, t + 0.07);
+    });
+  }
+  function look(tl, p, dx, dy, t, d) {
+    tl.to("." + p + "-pupil", { x: dx, y: dy, duration: d || 0.18, ease: "power2.out" }, t);
+  }
+  function shake(tl, sel, t, amp, n) {
+    amp = amp || 14; n = n || 8;
+    for (let i = 0; i < n; i++) {
+      const k = 1 - i / n, sx = (i % 2 ? -1 : 1) * amp * k, sy = ((i * 7) % 3 - 1) * amp * 0.6 * k;
+      tl.to(sel, { x: sx, y: sy, duration: 0.035, ease: "none" }, t + i * 0.035);
+    }
+    tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "power2.out" }, t + n * 0.035);
+  }
+  // Comic word: pops in big with overshoot, holds, then punches out.
+  function pow(tl, sel, t, hold, rot) {
+    tl.fromTo(sel, { scale: 0.2, opacity: 0, rotation: (rot || -8) - 14 }, { scale: 1, opacity: 1, rotation: rot || -8, duration: 0.28, ease: "back.out(2.2)" }, t);
+    tl.to(sel, { scale: 1.25, opacity: 0, duration: 0.18, ease: "power2.in" }, t + (hold || 1));
+  }
+
+      const tl = gsap.timeline({ paused: true });
+      
+    tl.fromTo("#s12-rear", { scale: 1, y: 0, transformOrigin: "50% 50%" }, { scale: 0.16, y: -270, duration: 5.5, ease: "power2.in" }, 0.4);
+    tl.fromTo(".s12-note", { y: 0, opacity: 0 }, { y: -140, opacity: 1, duration: 1.2, stagger: 0.3 }, 0.3);
+    tl.to(".s12-note", { opacity: 0, duration: 0.4 }, 2.15);
+    tl.fromTo("#s12-dash", { y: 0 }, { y: 70, duration: 0.35, repeat: 16, ease: "none" }, 0);
+      window.__timelines["s12"] = tl;
+    })();
+  </script>
+</template>

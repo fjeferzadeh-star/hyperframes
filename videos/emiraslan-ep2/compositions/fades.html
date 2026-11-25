@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; pointer-events: none; }
+    #fades-clip { position: absolute; inset: 0; }
+    #fades-black { position: absolute; inset: 0; background: #000; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="fades" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div id="fades-clip" class="clip" data-start="0" data-duration="146" data-track-index="0"><div id="fades-black"></div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#fades-black", { opacity: 0 }, { opacity: 1, duration: 0.60, ease: "power1.inOut", immediateRender: false }, 6.4);
+      tl.fromTo("#fades-black", { opacity: 1 }, { opacity: 0, duration: 0.80, ease: "power1.inOut", immediateRender: false }, 7);
+      tl.fromTo("#fades-black", { opacity: 0 }, { opacity: 1, duration: 1.40, ease: "power1.inOut", immediateRender: false }, 62.6);
+      tl.fromTo("#fades-black", { opacity: 1 }, { opacity: 0, duration: 0.30, ease: "power1.inOut", immediateRender: false }, 64);
+      tl.fromTo("#fades-black", { opacity: 0 }, { opacity: 1, duration: 0.40, ease: "power1.inOut", immediateRender: false }, 68.6);
+      tl.fromTo("#fades-black", { opacity: 1 }, { opacity: 0, duration: 1.20, ease: "power1.inOut", immediateRender: false }, 69);
+      tl.fromTo("#fades-black", { opacity: 0 }, { opacity: 1, duration: 1.40, ease: "power1.inOut", immediateRender: false }, 100.6);
+      tl.fromTo("#fades-black", { opacity: 1 }, { opacity: 0, duration: 1.20, ease: "power1.inOut", immediateRender: false }, 102);
+      tl.fromTo("#fades-black", { opacity: 0 }, { opacity: 1, duration: 1.20, ease: "power1.inOut", immediateRender: false }, 138.2);
+      tl.fromTo("#fades-black", { opacity: 1 }, { opacity: 0, duration: 0.30, ease: "power1.inOut", immediateRender: false }, 139.4);
+      tl.to({}, { duration: 146 }, 0);
+      window.__timelines["fades"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,286 @@
+<template>
+  <style>
+    
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrTitle"; src: url("assets/fonts/league-gothic-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrComic"; src: url("assets/fonts/archivo-black-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 600; src: url("assets/fonts/montserrat-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: "AmrSub"; font-weight: 800; src: url("assets/fonts/montserrat-latin-ext-800-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+20A0-20C0, U+2C60-2C7F, U+A720-A7FF; }
+  
+    #root { position: absolute; inset: 0; overflow: hidden; background: #1f2328; }
+    #s11-clip { position: absolute; inset: 0; }
+    #s11-cam { position: absolute; inset: 0; }
+    #s11-svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    
+  .comic {
+    position: absolute; font-family: "AmrComic", sans-serif; color: #ffd84a; opacity: 0;
+    -webkit-text-stroke: 10px #120d0a; paint-order: stroke fill; letter-spacing: 0.02em;
+    text-shadow: 8px 8px 0 #120d0a; white-space: nowrap; line-height: 1;
+  }
+  .caption-box {
+    position: absolute; background: #f3d54a; color: #15110d; font-family: "AmrComic", sans-serif;
+    font-size: 30px; padding: 12px 22px; border: 5px solid #15110d; box-shadow: 7px 7px 0 #15110d;
+    letter-spacing: 0.04em; opacity: 0; white-space: nowrap;
+  }
+
+    
+  </style>
+  <div id="root" data-composition-id="s11" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="s11-clip" class="clip" data-start="0" data-duration="20" data-track-index="0">
+      <div id="s11-cam">
+        <svg id="s11-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <defs></defs>
+          
+    <rect width="1920" height="1080" fill="#1f2328"/>
+    <g id="s11-window-clip"><rect x="0" y="140" width="1920" height="560" fill="#a9c4dc"/>
+      <g id="s11-pass"><g transform="translate(0,0)"><rect x="0" y="205.53608134388924" width="125.91076609212905" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="84.57694688579068" fill="#4f7340"/></g><g transform="translate(380,0)"><rect x="0" y="186.94575794041157" width="235.65514598041773" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="93.5198545246385" fill="#4f7340"/></g><g transform="translate(760,0)"><rect x="0" y="183.35797236766666" width="145.30456341337413" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="87.51755092060193" fill="#4f7340"/></g><g transform="translate(1140,0)"><rect x="0" y="209.75481934379786" width="216.5111630083993" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="71.61067450419068" fill="#4f7340"/></g><g transform="translate(1520,0)"><rect x="0" y="187.81764363404363" width="130.47650797758251" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="85.19761072937399" fill="#4f7340"/></g><g transform="translate(1900,0)"><rect x="0" y="238.59289673622698" width="128.05328500457108" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="77.48421888099983" fill="#4f7340"/></g><g transform="translate(2280,0)"><rect x="0" y="188.16641972400248" width="149.0974977845326" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="70.2477340423502" fill="#4f7340"/></g><g transform="translate(2660,0)"><rect x="0" y="228.93751988187432" width="192.9503764025867" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="88.18153114058077" fill="#4f7340"/></g><g transform="translate(3040,0)"><rect x="0" y="198.22673582006246" width="156.26879175193608" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="78.2740715937689" fill="#4f7340"/></g><g transform="translate(3420,0)"><rect x="0" y="222.58447764907032" width="182.10959748364985" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="87.65455247834325" fill="#4f7340"/></g><g transform="translate(3800,0)"><rect x="0" y="205.53608134388924" width="125.91076609212905" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="84.57694688579068" fill="#4f7340"/></g><g transform="translate(4180,0)"><rect x="0" y="186.94575794041157" width="235.65514598041773" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="93.5198545246385" fill="#4f7340"/></g><g transform="translate(4560,0)"><rect x="0" y="183.35797236766666" width="145.30456341337413" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="87.51755092060193" fill="#4f7340"/></g><g transform="translate(4940,0)"><rect x="0" y="209.75481934379786" width="216.5111630083993" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="71.61067450419068" fill="#4f7340"/></g><g transform="translate(5320,0)"><rect x="0" y="187.81764363404363" width="130.47650797758251" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="85.19761072937399" fill="#4f7340"/></g><g transform="translate(5700,0)"><rect x="0" y="238.59289673622698" width="128.05328500457108" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="77.48421888099983" fill="#4f7340"/></g><g transform="translate(6080,0)"><rect x="0" y="188.16641972400248" width="149.0974977845326" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="70.2477340423502" fill="#4f7340"/></g><g transform="translate(6460,0)"><rect x="0" y="228.93751988187432" width="192.9503764025867" height="600" fill="#9aa6b4"/><circle cx="220" cy="560" r="88.18153114058077" fill="#4f7340"/></g><g transform="translate(6840,0)"><rect x="0" y="198.22673582006246" width="156.26879175193608" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="78.2740715937689" fill="#4f7340"/></g><g transform="translate(7220,0)"><rect x="0" y="222.58447764907032" width="182.10959748364985" height="600" fill="#8c98a8"/><circle cx="220" cy="560" r="87.65455247834325" fill="#4f7340"/></g></g></g>
+    <path d="M 0,140 L 1920,140 L 1920,190 L 0,250 Z" fill="#2a2e34"/>
+    <rect x="0" y="0" width="1920" height="150" fill="#2a2e34"/>
+    <path d="M 1500,140 L 1600,140 L 1440,700 L 1340,700 Z" fill="#2a2e34"/>
+    <g id="s11-seat"><path d="M 560,420 C 560,330 1160,330 1160,420 L 1180,1080 L 540,1080 Z" fill="#3a3e45"/><rect x="740" y="250" width="240" height="180" rx="40" fill="#43474f"/></g>
+    <g transform="translate(860,420) scale(1)" >
+  <g id="s11a-rig">
+    
+    <g id="s11a-legs"><g id="s11a-legL">
+      <path d="M -150,468 L -8,468 L -20,842 L -128,842 Z" fill="#47523a"/>
+      <path d="M -132,832 L -16,832 L -12,880 L -150,880 C -150,860 -144,842 -132,832 Z" fill="#15120f"/>
+    </g><g id="s11a-legR">
+      <path d="M 150,468 L 8,468 L 20,842 L 128,842 Z" fill="#47523a"/>
+      <path d="M 132,832 L 16,832 L 12,880 L 150,880 C 150,860 144,842 132,832 Z" fill="#15120f"/>
+    </g></g>
+    
+  <g id="s11a-torso">
+    <path d="M -40,106 C -100,114 -158,124 -172,160 C -178,200 -168,300 -150,470 L 150,470 C 168,300 178,200 172,160 C 158,124 100,114 40,106 Z" fill="#4f5b3a"/>
+    <path d="M 20,110 C 100,114 158,124 172,160 C 178,200 168,300 150,470 L 60,470 C 90,320 100,200 20,110 Z" fill="#000" opacity=".1"/>
+    <path d="M -40,104 L 0,150 L 40,104 L 30,96 L 0,126 L -30,96 Z" fill="#414c30"/>
+    <path d="M -2,150 L -2,440" stroke="#414c30" stroke-width="3"/>
+    <circle cx="10" cy="190" r="6" fill="#d6b45a"/><circle cx="10" cy="260" r="6" fill="#d6b45a"/><circle cx="10" cy="330" r="6" fill="#d6b45a"/><circle cx="10" cy="400" r="6" fill="#d6b45a"/>
+    <circle cx="-26" cy="132" r="5" fill="#d6b45a"/><circle cx="26" cy="132" r="5" fill="#d6b45a"/>
+    <path d="M -130,200 L -50,200 L -50,262 L -130,262 Z M 50,200 L 130,200 L 130,262 L 50,262 Z" fill="none" stroke="#414c30" stroke-width="3"/>
+    <rect x="-152" y="436" width="304" height="34" fill="#3b2b1d"/><rect x="-18" y="438" width="36" height="30" rx="3" fill="none" stroke="#d6b45a" stroke-width="4"/>
+    
+    <g transform="translate(-128,138) rotate(-8)">
+      <rect x="-46" y="-12" width="92" height="24" rx="5" fill="#5a6743"/>
+      <rect x="-46" y="-12" width="6" height="24" fill="#9b2d23"/><rect x="40" y="-12" width="6" height="24" fill="#9b2d23"/>
+      <polygon points="-24.0,-6.0 -22.4,-2.2 -18.3,-1.9 -21.4,0.8 -20.5,4.9 -24.0,2.7 -27.5,4.9 -26.6,0.8 -29.7,-1.9 -25.6,-2.2" fill="#d6b45a"/><polygon points="-8.0,-6.0 -6.4,-2.2 -2.3,-1.9 -5.4,0.8 -4.5,4.9 -8.0,2.7 -11.5,4.9 -10.6,0.8 -13.7,-1.9 -9.6,-2.2" fill="#d6b45a"/><polygon points="8.0,-6.0 9.6,-2.2 13.7,-1.9 10.6,0.8 11.5,4.9 8.0,2.7 4.5,4.9 5.4,0.8 2.3,-1.9 6.4,-2.2" fill="#d6b45a"/><polygon points="24.0,-6.0 25.6,-2.2 29.7,-1.9 26.6,0.8 27.5,4.9 24.0,2.7 20.5,4.9 21.4,0.8 18.3,-1.9 22.4,-2.2" fill="#d6b45a"/>
+    </g>
+    <g transform="translate(128,138) rotate(8)">
+      <rect x="-46" y="-12" width="92" height="24" rx="5" fill="#5a6743"/>
+      <rect x="-46" y="-12" width="6" height="24" fill="#9b2d23"/><rect x="40" y="-12" width="6" height="24" fill="#9b2d23"/>
+      <polygon points="-24.0,-6.0 -22.4,-2.2 -18.3,-1.9 -21.4,0.8 -20.5,4.9 -24.0,2.7 -27.5,4.9 -26.6,0.8 -29.7,-1.9 -25.6,-2.2" fill="#d6b45a"/><polygon points="-8.0,-6.0 -6.4,-2.2 -2.3,-1.9 -5.4,0.8 -4.5,4.9 -8.0,2.7 -11.5,4.9 -10.6,0.8 -13.7,-1.9 -9.6,-2.2" fill="#d6b45a"/><polygon points="8.0,-6.0 9.6,-2.2 13.7,-1.9 10.6,0.8 11.5,4.9 8.0,2.7 4.5,4.9 5.4,0.8 2.3,-1.9 6.4,-2.2" fill="#d6b45a"/><polygon points="24.0,-6.0 25.6,-2.2 29.7,-1.9 26.6,0.8 27.5,4.9 24.0,2.7 20.5,4.9 21.4,0.8 18.3,-1.9 22.4,-2.2" fill="#d6b45a"/>
+    </g>
+  </g>
+    
+  <g id="s11a-armL">
+    <path d="M -202,150 C -210,220 -208,340 -202,450 L -152,450 C -148,340 -150,230 -158,150 Z" fill="#4f5b3a"/>
+    <rect x="-203" y="436" width="52" height="16" fill="#414c30"/>
+    <ellipse cx="-177" cy="478" rx="25" ry="32" fill="#c4926e"/>
+    <g id="s11a-handL"></g>
+  </g>
+    
+  <g id="s11a-armR">
+    <path d="M 150,150 C 142,220 144,340 150,450 L 200,450 C 204,340 202,230 194,150 Z" fill="#4f5b3a"/>
+    <rect x="149" y="436" width="52" height="16" fill="#414c30"/>
+    <ellipse cx="175" cy="478" rx="25" ry="32" fill="#c4926e"/>
+    <g id="s11a-handR"></g>
+  </g>
+    
+  <g id="s11a-head">
+    <rect x="-30" y="70" width="60" height="70" fill="#a87657"/>
+    <path d="M -30,96 Q 0,118 30,96 L 30,112 Q 0,128 -30,112 Z" fill="#000" opacity=".18"/>
+    <ellipse cx="-76" cy="2" rx="14" ry="24" fill="#a87657"/>
+    <ellipse cx="76" cy="2" rx="14" ry="24" fill="#a87657"/>
+    <path d="M -72,-40 C -74,40 -50,96 0,102 C 50,96 74,40 72,-40 C 70,-92 40,-112 0,-112 C -40,-112 -70,-92 -72,-40 Z" fill="#c4926e"/>
+    <path d="M 8,-112 C 40,-112 70,-92 72,-40 C 74,40 50,96 8,102 C 40,80 52,30 50,-20 C 48,-70 30,-100 8,-112 Z" fill="#000" opacity=".1"/>
+    <path d="M -70,8 C -66,62 -40,100 0,102 C 40,100 66,62 70,8 C 62,38 46,50 30,47 C 16,44 -16,44 -30,47 C -46,50 -62,38 -70,8 Z" fill="#33251e" opacity=".42"/>
+    <path d="M -28,57 C -20,45 20,45 28,57 C 15,52 -15,52 -28,57 Z" fill="#241913" opacity=".75"/>
+    <path d="M -6,86 Q 0,96 6,86 Z" fill="#241913" opacity=".5"/>
+    
+  <g id="s11a-mouths">
+    <g id="s11a-m-closed"><path d="M -17,63 Q 0,67 17,63" stroke="#5a3428" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M -10,67 Q 0,72 10,67" stroke="#5a3428" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/></g>
+    <g id="s11a-m-open" opacity="0"><path d="M -15,59 Q 0,55 15,59 Q 13,78 0,80 Q -13,78 -15,59 Z" fill="#3a1a15"/><path d="M -9,73 Q 0,70 9,73 Q 6,79 0,79 Q -6,79 -9,73 Z" fill="#b2584e"/></g>
+    <g id="s11a-m-shout" opacity="0"><path d="M -22,56 Q 0,50 22,56 Q 20,94 0,97 Q -20,94 -22,56 Z" fill="#30140f"/><path d="M -16,58 Q 0,55 16,58 L 15,63 Q 0,60 -15,63 Z" fill="#f1ede4"/><path d="M -12,85 Q 0,80 12,85 Q 8,94 0,94 Q -8,94 -12,85 Z" fill="#b2584e"/></g>
+    <g id="s11a-m-smile" opacity="0"><path d="M -22,58 Q 0,78 22,58 Q 0,70 -22,58 Z" fill="#3a1a15"/><path d="M -20,59 Q 0,66 20,59 L 19,62 Q 0,68 -19,62 Z" fill="#f1ede4"/></g>
+    <g id="s11a-m-smirk" opacity="0"><path d="M -16,65 Q 6,68 24,55" stroke="#5a3428" stroke-width="3.4" fill="none" stroke-linecap="round"/></g>
+    <g id="s11a-m-yawn" opacity="0"><ellipse cx="0" cy="72" rx="16" ry="24" fill="#30140f"/><ellipse cx="0" cy="84" rx="9" ry="8" fill="#b2584e"/></g>
+  </g>
+    <path d="M 2,-30 C 4,0 6,18 11,27 C 6,34 -6,34 -13,29" stroke="#2b1a12" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M -10,30 q 3,-3 6,0 M 4,30 q 3,-3 6,0" stroke="#2b1a12" stroke-width="2" fill="none" opacity=".6"/>
+    <path d="M -54,-8 Q -32,-2 -12,-8 M 12,-8 Q 32,-2 54,-8" stroke="#000" stroke-width="3" fill="none" opacity=".12"/>
+    <g id="s11a-eyes">
+  <g id="s11a-eyeL">
+    <path d="M -52,-20 Q -32,-34 -12,-20 Q -32,-10 -52,-20 Z" fill="#f3ece2"/>
+    <g class="s11a-pupil"><circle cx="-33" cy="-21" r="7.5" fill="#5a3a22"/><circle cx="-33" cy="-21" r="3.6" fill="#0d0907"/><circle cx="-30.5" cy="-23.5" r="1.6" fill="#fff" opacity=".8"/></g>
+    <path d="M -54,-19 Q -32,-36 -10,-20" stroke="#1e140f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <path d="M -48,-12 Q -32,-7 -16,-12" stroke="#000" stroke-width="2" fill="none" opacity=".18"/>
+  </g>
+  <g id="s11a-eyeR">
+    <path d="M 12,-20 Q 32,-34 52,-20 Q 32,-10 12,-20 Z" fill="#f3ece2"/>
+    <g class="s11a-pupil"><circle cx="33" cy="-21" r="7.5" fill="#5a3a22"/><circle cx="33" cy="-21" r="3.6" fill="#0d0907"/><circle cx="35.5" cy="-23.5" r="1.6" fill="#fff" opacity=".8"/></g>
+    <path d="M 10,-19 Q 32,-36 54,-20" stroke="#1e140f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    
+    <path d="M 16,-12 Q 32,-7 48,-12" stroke="#000" stroke-width="2" fill="none" opacity=".18"/>
+  </g></g>
+    <g id="s11a-brows">
+      <path d="M -60,-44 L -12,-48 L -12,-38 L -58,-35 Z" fill="#1b1411"/>
+      <path d="M 60,-44 L 12,-48 L 12,-38 L 58,-35 Z" fill="#1b1411"/>
+    </g>
+    <path d="M -74,-40 C -80,-104 -45,-142 2,-142 C 50,-142 80,-106 74,-40 C 71,-62 67,-78 58,-88 C 30,-98 -30,-100 -60,-86 C -68,-75 -72,-60 -74,-40 Z" fill="#231a16"/>
+    <path d="M -50,-108 q 6,-5 12,0 M -20,-118 q 6,-5 12,0 M 10,-118 q 6,-5 12,0 M 38,-110 q 6,-5 12,0 M -36,-96 q 6,-5 12,0 M 22,-98 q 6,-5 12,0" stroke="#3a2c25" stroke-width="3" fill="none"/>
+    <path d="M -74,-42 C -80,-104 -45,-140 2,-142" stroke="#6f86b8" stroke-width="3.5" fill="none"/>
+    <path d="M -72,-38 C -73,10 -66,50 -48,78" stroke="#6f86b8" stroke-width="2" fill="none" opacity=".55"/>
+  </g>
+  </g></g>
+    <g id="s11-wheel" transform="translate(760,980)"><g id="s11-wheel-in"><circle r="250" fill="none" stroke="#141414" stroke-width="44"/><path d="M -240,0 L 240,0 M 0,0 L 0,240" stroke="#141414" stroke-width="40"/><circle r="70" fill="#202227"/><ellipse cx="0" cy="0" rx="30" ry="14" fill="#9aa1a8"/></g></g>
+    <g id="s11-handL"><ellipse cx="530" cy="900" rx="46" ry="34" fill="#c4926e"/></g>
+    <g id="s11-handR"><ellipse cx="990" cy="900" rx="46" ry="34" fill="#c4926e"/></g>
+    <path d="M 1100,880 C 1300,840 1700,840 1920,860 L 1920,1080 L 1100,1080 Z" fill="#26292e"/>
+    <g id="s11-radio" transform="translate(1500,950)"><rect x="-180" y="-60" width="360" height="120" rx="12" fill="#121417"/><rect x="-160" y="-44" width="230" height="56" rx="6" fill="#0d2b2a"/>
+      <text x="-148" y="0" font-family="AmrSub" font-weight="800" font-size="30" fill="#5ff2c9">FM 101.1</text>
+      <g id="s11-bars"><rect class="s11-bar" x="-150" y="20" width="16" height="22" fill="#5ff2c9" opacity="1"/><rect class="s11-bar" x="-124" y="20" width="16" height="22" fill="#5ff2c9" opacity="1"/><rect class="s11-bar" x="-98" y="20" width="16" height="22" fill="#5ff2c9" opacity="1"/><rect class="s11-bar" x="-72" y="20" width="16" height="22" fill="#5ff2c9" opacity="0.2"/><rect class="s11-bar" x="-46" y="20" width="16" height="22" fill="#5ff2c9" opacity="0.2"/><rect class="s11-bar" x="-20" y="20" width="16" height="22" fill="#5ff2c9" opacity="0.2"/><rect class="s11-bar" x="6" y="20" width="16" height="22" fill="#5ff2c9" opacity="0.2"/><rect class="s11-bar" x="32" y="20" width="16" height="22" fill="#5ff2c9" opacity="0.2"/></g>
+      <g id="s11-knob" transform="translate(120,0)"><circle r="40" fill="#2a2d33" stroke="#555" stroke-width="4"/><path d="M 0,0 L 0,-32" stroke="#ddd" stroke-width="6" stroke-linecap="round"/></g></g>
+    <g id="s11-phone" transform="translate(1270,560)"><g id="s11-phone-in"><rect x="-90" y="-160" width="180" height="320" rx="24" fill="#0f0f12"/><rect x="-80" y="-146" width="160" height="292" rx="16" fill="#1b2a3f"/>
+      <g id="s11-ring"><text x="0" y="-80" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#fff">Zəng gəlir...</text>
+        <circle cx="0" cy="-20" r="34" fill="#4a5b75"/><path d="M -14,-26 a 14,14 0 1 1 28,0 a 14,14 0 1 1 -28,0 M -24,4 q 24,-24 48,0" fill="#c9d4e4"/>
+        <circle cx="-40" cy="90" r="24" fill="#d33a3a"/><circle id="s11-accept" cx="40" cy="90" r="24" fill="#2fb35a"/></g>
+      <g id="s11-talking" opacity="0"><text x="0" y="-60" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#fff">Danışıq</text><text id="s11-timer" x="0" y="-26" text-anchor="middle" font-family="AmrSub" font-weight="600" font-size="22" fill="#8fd3a8">00:00</text><circle cx="0" cy="90" r="24" fill="#d33a3a"/></g>
+      <g id="s11-ended" opacity="0"><text x="0" y="-40" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#ffb4b4">Zəng bitdi</text></g></g></g>
+        </svg>
+        
+    <div id="s11-trr" class="comic" style="left:1330px; top:280px; font-size:76px;">TRRRR!</div>
+    <div id="s11-q" class="comic" style="left:1060px; top:230px; font-size:110px; color:#ff5a3a;">?!</div>
+    <div id="s11-lie" class="caption-box" style="left:150px; top:170px; font-family:'AmrSub'; font-weight:800;">* ƏSLİNDƏ, İŞDƏ DEYİL...</div>
+    <div id="s11-ding" class="comic" style="left:1100px; top:300px; font-size:90px; color:#fff6b0;">✦</div>
+    <div id="s11-up" class="comic" style="left:1330px; top:720px; font-size:64px;">SƏS: MAX!</div>
+    <div id="s11-notes" style="position:absolute; inset:0; pointer-events:none;"><div class="s11-note comic" style="left:1400px; top:800px; font-size:60px; font-family:'AmrSub';">♪</div><div class="s11-note comic" style="left:1470px; top:800px; font-size:60px; font-family:'AmrSub';">♫</div><div class="s11-note comic" style="left:1540px; top:800px; font-size:60px; font-family:'AmrSub';">♪</div><div class="s11-note comic" style="left:1610px; top:800px; font-size:60px; font-family:'AmrSub';">♫</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      
+  const $ = (s) => document.querySelector(s);
+  const MOUTHS = ["closed", "open", "shout", "smile", "smirk", "yawn"];
+  function mouth(tl, p, state, t) {
+    MOUTHS.forEach(function (m) {
+      const el = document.getElementById(p + "-m-" + m);
+      if (el) tl.set(el, { opacity: m === state ? 1 : 0 }, t);
+    });
+  }
+  // Lip flap between two states; offsets vary so it never reads as a metronome.
+  function talk(tl, p, t0, t1, open, rest) {
+    open = open || "open"; rest = rest || "closed";
+    const steps = [0.11, 0.09, 0.14, 0.08, 0.12, 0.1, 0.16, 0.09];
+    let t = t0, i = 0, on = true;
+    while (t < t1 - 0.05) { mouth(tl, p, on ? open : rest, t); t += steps[i % steps.length]; i++; on = !on; }
+    mouth(tl, p, rest, t1);
+  }
+  function blink(tl, p, t) {
+    ["L", "R"].forEach(function (s) {
+      const e = document.getElementById(p + "-eye" + s);
+      if (!e) return;
+      tl.to(e, { scaleY: 0.08, transformOrigin: "50% 50%", duration: 0.06, ease: "power2.in" }, t);
+      tl.to(e, { scaleY: 1, transformOrigin: "50% 50%", duration: 0.08, ease: "power2.out" }, t + 0.07);
+    });
+  }
+  function look(tl, p, dx, dy, t, d) {
+    tl.to("." + p + "-pupil", { x: dx, y: dy, duration: d || 0.18, ease: "power2.out" }, t);
+  }
+  function shake(tl, sel, t, amp, n) {
+    amp = amp || 14; n = n || 8;
+    for (let i = 0; i < n; i++) {
+      const k = 1 - i / n, sx = (i % 2 ? -1 : 1) * amp * k, sy = ((i * 7) % 3 - 1) * amp * 0.6 * k;
+      tl.to(sel, { x: sx, y: sy, duration: 0.035, ease: "none" }, t + i * 0.035);
+    }
+    tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "power2.out" }, t + n * 0.035);
+  }
+  // Comic word: pops in big with overshoot, holds, then punches out.
+  function pow(tl, sel, t, hold, rot) {
+    tl.fromTo(sel, { scale: 0.2, opacity: 0, rotation: (rot || -8) - 14 }, { scale: 1, opacity: 1, rotation: rot || -8, duration: 0.28, ease: "back.out(2.2)" }, t);
+    tl.to(sel, { scale: 1.25, opacity: 0, duration: 0.18, ease: "power2.in" }, t + (hold || 1));
+  }
+
+      const tl = gsap.timeline({ paused: true });
+      
+    // Scenery streams past the window the whole time.
+    tl.fromTo("#s11-pass", { x: -3800 }, { x: 0, duration: 20, ease: "none" }, 0);
+    tl.fromTo("#s11a-rig", { y: 0 }, { y: -4, duration: 0.2, yoyo: true, repeat: 99, ease: "sine.inOut" }, 0);
+    // Head-bobbing to the radio (0–2)
+    tl.fromTo("#s11a-head", { rotation: -4, transformOrigin: "50% 90%" }, { rotation: 4, duration: 0.42, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.1);
+    mouth(tl, "s11a", "smile", 0.2);
+    tl.fromTo("#s11-handR", { y: 0 }, { y: -12, duration: 0.21, yoyo: true, repeat: 7, ease: "power1.inOut" }, 0.1);
+    blink(tl, "s11a", 1.2);
+    // Phone rings (2–3.6)
+    tl.fromTo("#s11-phone-in", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 4, duration: 0.05, yoyo: true, repeat: 31, ease: "none" }, 2.0);
+    pow(tl, "#s11-trr", 2.0, 1.4, 8);
+    tl.to("#s11a-head", { rotation: 0, duration: 0.2 }, 2.0);
+    mouth(tl, "s11a", "closed", 2.1);
+    look(tl, "s11a", 8, 3, 2.2);
+    tl.to("#s11a-brows", { y: -6, duration: 0.15 }, 2.2);
+    // He answers (3.6) — radio volume down
+    tl.to("#s11-handR", { x: 270, y: -330, duration: 0.45, ease: "power2.inOut" }, 3.2);
+    tl.fromTo("#s11-accept", { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.4, duration: 0.1, yoyo: true, repeat: 1 }, 3.65);
+    tl.set("#s11-ring", { opacity: 0 }, 3.75); tl.set("#s11-talking", { opacity: 1 }, 3.75);
+    tl.to("#s11-handR", { x: 0, y: 0, duration: 0.45, ease: "power2.inOut" }, 3.9);
+    tl.to(".s11-bar", { opacity: (i) => (i < 1 ? 1 : 0.2), duration: 0.2 }, 3.8);
+    look(tl, "s11a", 0, 0, 4.0);
+    tl.to("#s11a-brows", { y: 0, duration: 0.2 }, 4.0);
+    // timer ticks while they talk
+    tl.set("#s11-timer", { textContent: "00:00" }, 3.75);
+    tl.set("#s11-timer", { textContent: "00:01" }, 4.75);
+    tl.set("#s11-timer", { textContent: "00:02" }, 5.75);
+    tl.set("#s11-timer", { textContent: "00:03" }, 6.75);
+    tl.set("#s11-timer", { textContent: "00:04" }, 7.75);
+    tl.set("#s11-timer", { textContent: "00:05" }, 8.75);
+    tl.set("#s11-timer", { textContent: "00:06" }, 9.75);
+    tl.set("#s11-timer", { textContent: "00:07" }, 10.75);
+    tl.set("#s11-timer", { textContent: "00:08" }, 11.75);
+    tl.set("#s11-timer", { textContent: "00:09" }, 12.75);
+    tl.set("#s11-timer", { textContent: "00:10" }, 13.75);
+    tl.set("#s11-timer", { textContent: "00:11" }, 14.75);
+    // Dialogue — times match the subtitle track (scene starts at 76 s)
+    // T: "Salam, Əmiraslan, necəsən?" 4.0–6.2 (he listens, smiles)
+    mouth(tl, "s11a", "smile", 4.6); blink(tl, "s11a", 5.4);
+    // Ə: "Çox sağ ol, sən necəsən?" 6.4–8.6
+    talk(tl, "s11a", 6.4, 8.4, "open", "smile");
+    // T: "İşdəsən?" 8.8–10.2 — the question lands
+    mouth(tl, "s11a", "closed", 8.8);
+    tl.to("#s11a-eyes", { scaleY: 1.3, transformOrigin: "50% 50%", duration: 0.1, ease: "power3.out" }, 9.6);
+    look(tl, "s11a", -9, 0, 9.7, 0.12);
+    pow(tl, "#s11-q", 9.6, 0.9, 6);
+    tl.to("#s11a-eyes", { scaleY: 1, transformOrigin: "50% 50%", duration: 0.2 }, 10.4);
+    // Ə: "Hə, işdəyəm..." 10.8–12.6 — the lie, said looking at the road
+    look(tl, "s11a", 0, 0, 10.6);
+    talk(tl, "s11a", 10.8, 12.2, "open", "closed");
+    tl.fromTo("#s11-lie", { opacity: 0, rotation: -6, scale: 1.3 }, { opacity: 1, rotation: -3, scale: 1, duration: 0.25, ease: "back.out(2)" }, 11.4);
+    tl.to("#s11-lie", { opacity: 0, duration: 0.25 }, 13.6);
+    // T: "Yaxşı, işdə ol." 13.0–14.6
+    blink(tl, "s11a", 13.4);
+    // Hang up (15)
+    tl.set("#s11-talking", { opacity: 0 }, 15.0); tl.set("#s11-ended", { opacity: 1 }, 15.0);
+    // The smirk + wink (15.4–17.6)
+    mouth(tl, "s11a", "smirk", 15.4);
+    tl.to("#s11a-brows", { y: -8, rotation: -3, transformOrigin: "50% 50%", duration: 0.25, ease: "back.out(2)" }, 15.5);
+    tl.to("#s11a-eyeR", { scaleY: 0.1, transformOrigin: "50% 50%", duration: 0.08 }, 16.2);
+    tl.to("#s11a-eyeR", { scaleY: 1, transformOrigin: "50% 50%", duration: 0.12 }, 16.55);
+    tl.fromTo("#s11-ding", { opacity: 0, scale: 0.2, rotation: 0 }, { opacity: 1, scale: 1, rotation: 90, duration: 0.3, ease: "back.out(2)" }, 16.2);
+    tl.to("#s11-ding", { opacity: 0, scale: 0.4, duration: 0.25 }, 16.8);
+    tl.fromTo("#s11-cam", { scale: 1, transformOrigin: "45% 35%" }, { scale: 1.25, duration: 0.6, ease: "power3.out" }, 15.4);
+    tl.to("#s11-cam", { scale: 1, duration: 0.6, ease: "power2.inOut" }, 17.4);
+    // Volume up (17.8–20)
+    tl.to("#s11-handR", { x: 470, y: 40, duration: 0.45, ease: "power2.inOut" }, 17.6);
+    tl.fromTo("#s11-knob", { rotation: 0 }, { rotation: 160, svgOrigin: "1620 950", duration: 0.6, ease: "power2.out" }, 18.1);
+    tl.to(".s11-bar", { opacity: 1, duration: 0.05, stagger: 0.06 }, 18.1);
+    pow(tl, "#s11-up", 18.2, 1.3, -5);
+    tl.fromTo(".s11-note", { y: 0, opacity: 0 }, { y: -260, opacity: 1, duration: 0.8, stagger: 0.18, ease: "power1.out" }, 18.3);
+    tl.to(".s11-note", { opacity: 0, duration: 0.3 }, 19.65);
+    mouth(tl, "s11a", "smile", 18.4);
+    tl.fromTo("#s11a-head", { rotation: -5 }, { rotation: 5, duration: 0.3, yoyo: true, repeat: 4, ease: "sine.inOut", transformOrigin: "50% 90%", immediateRender: false }, 18.5);
+      window.__timelines["s11"] = tl;
+    })();
+  </script>
+</template>
