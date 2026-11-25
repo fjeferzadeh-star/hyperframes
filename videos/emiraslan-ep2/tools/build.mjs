@@ -250,6 +250,109 @@ function audioTags() {
   }).join("\n");
 }
 
+// ---- Music: [id, file, start, duration, volume, fadeIn, fadeOut, automation lanes (t from clip start)] ----
+const vol = (pts) => ({ target: "volume", points: pts.map(([t, v]) => ({ t, v })) });
+const MUSIC = [
+  ["m-title", "title-theme", 0.0, 7.6, 0.9, 0.2, 1.0, null],
+  // El Capitan under the parade; dips under the commander and the crowd, back up for the dispersal.
+  [
+    "m-march",
+    "march",
+    7.0,
+    45.6,
+    1.5,
+    2.0,
+    1.6,
+    [
+      vol([
+        [0, 0.55],
+        [6.5, 1],
+        [15.8, 1],
+        [16.3, 0.4],
+        [24.4, 0.4],
+        [24.9, 1],
+        [28.2, 1],
+        [28.5, 0.4],
+        [33.5, 0.45],
+        [34.5, 1],
+        [45.6, 1],
+      ]),
+    ],
+  ],
+  // Sneaky comedy bed in the office; its sting lands on "3 saat keçdi".
+  ["m-office", "office-comedy", 52.4, 14.0, 0.6, 1.0, 1.2, null],
+  // Car radio: muffled from outside, clear inside, ducked for the call, cranked after the smirk.
+  [
+    "m-radio",
+    "radio",
+    69.0,
+    33.0,
+    0.5,
+    0.8,
+    1.4,
+    [
+      vol([
+        [0, 1],
+        [10.6, 1],
+        [10.9, 0.28],
+        [25.1, 0.28],
+        [25.6, 1.6],
+        [33, 1.6],
+      ]),
+      {
+        target: "fx.lp.frequency",
+        points: [
+          { t: 0, v: 1400 },
+          { t: 6.9, v: 1400 },
+          { t: 7.1, v: 12000 },
+          { t: 26.9, v: 12000 },
+          { t: 27.1, v: 1600 },
+        ],
+      },
+    ],
+    {
+      version: 1,
+      nodes: [
+        {
+          type: "lowpass",
+          id: "lp",
+          label: "Heard from outside the car",
+          params: { frequency: 12000 },
+        },
+      ],
+    },
+  ],
+  ["m-roof", "roof", 102.0, 13.6, 0.45, 1.5, 1.0, null],
+  // Hero theme from the scream; its loudest bar lands on the punch.
+  [
+    "m-hero",
+    "hero",
+    115.0,
+    31.0,
+    0.55,
+    0.4,
+    2.0,
+    [
+      vol([
+        [0, 0.7],
+        [6.8, 0.7],
+        [7.3, 1.15],
+        [20.0, 1.15],
+        [23.0, 0.9],
+        [31, 0.9],
+      ]),
+    ],
+  ],
+];
+
+function musicTags() {
+  return MUSIC.map(([id, file, start, dur, v, fi, fo, lanes, fx], i) => {
+    const auto = lanes ? ` data-automation='${JSON.stringify({ version: 1, lanes })}'` : "";
+    const chain = fx ? ` data-fx-chain="${JSON.stringify(fx).replace(/"/g, "&quot;")}"` : "";
+    return `      <audio id="${id}" data-timeline-role="music" src="assets/music/${file}.mp3" data-start="${start}" data-duration="${dur}" data-track-index="${30 + (i % 2)}" data-volume="${v}" data-fade-in="${fi}" data-fade-out="${fo}"${auto}${chain}></audio>`;
+  }).join("\n");
+}
+
 // ---- index.html ----
 const hosts = SCENES.map(
   ([id, label, start, dur]) =>
@@ -277,6 +380,7 @@ ${hosts}
       <div id="fades" data-composition-id="fades" data-composition-src="compositions/fades.html" data-start="0" data-duration="${TOTAL}" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
       <div id="frame" data-composition-id="frame" data-composition-src="compositions/frame.html" data-start="0" data-duration="${TOTAL}" data-track-index="3" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:6"></div>
       <div id="subs" data-composition-id="subs" data-composition-src="compositions/subs.html" data-start="0" data-duration="${TOTAL}" data-track-index="4" data-track-kind="captions" data-width="1920" data-height="1080" style="z-index:7"></div>
+${musicTags()}
 ${audioTags()}
     </div>
     <script>

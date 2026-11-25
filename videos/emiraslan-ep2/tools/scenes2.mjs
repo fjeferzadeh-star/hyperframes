@@ -533,13 +533,16 @@ export function s17() {
     .map((ch) => `<span class="s17-l">${ch === " " ? "&nbsp;" : ch}</span>`)
     .join("");
   const html = `<div id="s17-t">${letters}</div>
-    <div id="s17-logo">ƏMİRASLAN</div>`;
+    <div id="s17-logo">ƏMİRASLAN</div>
+    <div id="s17-credits">Musiqi: "Orchestral Hero Theme" — TheoJT · "El Capitan" — U.S. Marine Band · "Suspense Comedy" — tyops<br/>"Super Power Pop Rock" — Kara Square · "Dramatic Ambient", "Epic Heroic Orchestral" — SoundFlakes · CC BY</div>`;
   const css = `#s17-t { position: absolute; left: 0; right: 0; top: 400px; text-align: center; font-family: "AmrTitle"; font-size: 150px; color: #e2c46a; letter-spacing: 0.03em; text-shadow: 0 6px 0 #6b5420; }
     .s17-l { display: inline-block; opacity: 0; }
+    #s17-credits { position: absolute; left: 0; right: 0; top: 780px; text-align: center; font-family: "AmrSub"; font-weight: 600; font-size: 22px; line-height: 1.6; color: #b9b2a0; opacity: 0; }
     #s17-logo { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-family: "AmrTitle"; font-size: 56px; color: #efe3c4; letter-spacing: 0.3em; opacity: 0; }`;
   const js = `
     tl.fromTo(".s17-l", { opacity: 0, y: 30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, stagger: 0.07, ease: "expo.out" }, 1.0);
     tl.fromTo("#s17-logo", { opacity: 0 }, { opacity: 0.85, duration: 0.8, ease: "power2.out" }, 2.4);
-    tl.to(["#s17-t", "#s17-logo"], { opacity: 0, duration: 0.6, ease: "power2.in" }, 6.2);`;
+    tl.fromTo("#s17-credits", { opacity: 0 }, { opacity: 0.9, duration: 0.8, ease: "power2.out" }, 3.0);
+    tl.to(["#s17-t", "#s17-logo", "#s17-credits"], { opacity: 0, duration: 0.6, ease: "power2.in" }, 6.3);`;
   return scene("s17", 7, { bg: "#000", html, css, js });
 }
