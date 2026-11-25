@@ -37,26 +37,12 @@ function draw(c, t) {
     c.restore();
   }
   const b = pop(T.seg(t, 1.6, 2.1));
-  if (b > 0) {
-    c.save();
-    c.translate(720, 580);
-    c.scale(b, b);
-    c.font = '110px "Bangers"';
-    c.textAlign = "center";
-    c.textBaseline = "middle";
-    c.lineWidth = 14;
-    c.strokeStyle = T.INK;
-    c.strokeText("DAXİLİ QOŞUNLAR", 0, 0);
-    c.fillStyle = "#ffffff";
-    c.fillText("DAXİLİ QOŞUNLAR", 0, 0);
-    c.restore();
-    T.flag(c, 1170 - (1 - b) * 40, 538, 120, 80, t, { pole: false, amp: 4 });
-  }
+  if (b > 0) T.flag(c, 660 - (1 - b) * 40, 540, 150, 100, t, { pole: false, amp: 5 });
   const d = T.out3(T.seg(t, 2.4, 3.0));
   if (d > 0) {
     c.save();
     c.globalAlpha = d;
-    c.translate(720, 720 + (1 - d) * 30);
+    c.translate(720, 740 + (1 - d) * 30);
     c.fillStyle = "#e53935";
     c.beginPath();
     c.roundRect(-430, -42, 860, 84, 42);

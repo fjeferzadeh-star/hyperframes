@@ -1,4 +1,4 @@
-# Emiraslan: Daxili Qoşunlar — 1-ci bölüm: Joker Team-in hücumu
+# Emiraslan — 1-ci bölüm: Joker Team-in hücumu
 
 A 5:21 cartoon episode built with HyperFrames (1920×1080, 30 fps). Dialogue is shown as captions; characters move their mouths while they speak.
 
