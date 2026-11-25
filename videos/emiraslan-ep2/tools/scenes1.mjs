@@ -11,7 +11,7 @@ import {
 } from "./lib.mjs";
 import { scene, place } from "./scene.mjs";
 
-const SCHWA = `<span class="schwa">e</span>`;
+const SCHWA = "Ə";
 const SKY_DAY = `<linearGradient id="IDsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f93b8"/><stop offset=".6" stop-color="#c9b48e"/><stop offset="1" stop-color="#e3c79a"/></linearGradient>`;
 
 function flagPole(p, x, y, h, w) {
@@ -47,7 +47,7 @@ export function s01() {
         <path d="M -110,-120 L 110,-120 L 110,10 L 0,110 L -110,10 Z" fill="${C.goldDeep}"/>
         <path d="M -96,-106 L 96,-106 L 96,4 L 0,94 L -96,4 Z" fill="${C.gold}"/>
         <path d="M -96,-106 L 20,-106 L -66,30 L -96,4 Z" fill="#fff" opacity=".2"/>
-        <text x="0" y="62" text-anchor="middle" font-family="AmrTitle" font-size="230" fill="#7a1c1c" transform="rotate(180) translate(0,40)">e</text>
+        <text x="0" y="40" text-anchor="middle" font-family="AmrTitle" font-size="190" fill="#7a1c1c">Ə</text>
       </g>
     </g>`;
   const defs = `<radialGradient id="s01-bg" cx=".5" cy=".42" r=".7"><stop offset="0" stop-color="#1d2540"/><stop offset=".6" stop-color="#11162a"/><stop offset="1" stop-color="#07090f"/></radialGradient>`;
@@ -56,11 +56,10 @@ export function s01() {
     <div id="s01-rule"></div>
     <div id="s01-sub">İKİNCİ HİSSƏ</div>`;
   const css = `
-    #s01-title { position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-family: "AmrTitle"; font-size: 210px; letter-spacing: 0.06em; color: #e2c46a; text-shadow: 0 6px 0 #6b5420, 0 0 40px rgba(226,196,106,.35); }
+    #s01-title { position: absolute; left: 0; right: 0; top: 545px; text-align: center; font-family: "AmrTitle"; font-size: 190px; letter-spacing: 0.04em; color: #e2c46a; text-shadow: 0 6px 0 #6b5420, 0 0 40px rgba(226,196,106,.35); }
     .s01-l { display: inline-block; opacity: 0; }
-    .schwa { display: inline-block; transform: translateY(-0.13em) rotate(180deg) scale(1.3, 1.5); transform-origin: 50% 60%; margin: 0 0.08em; }
-    #s01-rule { position: absolute; left: 50%; top: 790px; width: 640px; height: 4px; margin-left: -320px; background: linear-gradient(90deg, transparent, #e2c46a, transparent); transform-origin: 50% 50%; }
-    #s01-sub { position: absolute; left: 0; right: 0; top: 812px; text-align: center; font-family: "AmrSub"; font-weight: 800; font-size: 34px; letter-spacing: 0.55em; color: #efe3c4; opacity: 0; }`;
+    #s01-rule { position: absolute; left: 50%; top: 822px; width: 640px; height: 4px; margin-left: -320px; background: linear-gradient(90deg, transparent, #e2c46a, transparent); transform-origin: 50% 50%; }
+    #s01-sub { position: absolute; left: 0; right: 0; top: 846px; text-align: center; font-family: "AmrSub"; font-weight: 800; font-size: 34px; letter-spacing: 0.55em; color: #efe3c4; opacity: 0; }`;
   const js = `
     tl.fromTo("#s01-rain", { y: 0 }, { y: 1080, duration: 7, ease: "none" }, 0);
     tl.fromTo("#s01-rain2", { y: 0 }, { y: 1080, duration: 7, ease: "none" }, 0);

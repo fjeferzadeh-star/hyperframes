@@ -157,11 +157,11 @@ export function s11() {
       <g id="s11-bars">${[...Array(8)].map((_, i) => `<rect class="s11-bar" x="${-150 + i * 26}" y="20" width="16" height="22" fill="#5ff2c9" opacity="${i < 3 ? 1 : 0.2}"/>`).join("")}</g>
       <g id="s11-knob" transform="translate(120,0)"><circle r="40" fill="#2a2d33" stroke="#555" stroke-width="4"/><path d="M 0,0 L 0,-32" stroke="#ddd" stroke-width="6" stroke-linecap="round"/></g></g>
     <g id="s11-phone" transform="translate(1270,560)"><g id="s11-phone-in"><rect x="-90" y="-160" width="180" height="320" rx="24" fill="#0f0f12"/><rect x="-80" y="-146" width="160" height="292" rx="16" fill="#1b2a3f"/>
-      <g id="s11-ring"><text x="0" y="-80" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#fff">Zəng gəlir...</text>
+      <g id="s11-ring"><text x="0" y="-112" text-anchor="middle" font-family="AmrSub" font-weight="600" font-size="16" fill="#9fb3cc">Zəng gəlir...</text><text x="0" y="-80" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="27" fill="#fff">Baş İdarə</text>
         <circle cx="0" cy="-20" r="34" fill="#4a5b75"/><path d="M -14,-26 a 14,14 0 1 1 28,0 a 14,14 0 1 1 -28,0 M -24,4 q 24,-24 48,0" fill="#c9d4e4"/>
         <circle cx="-40" cy="90" r="24" fill="#d33a3a"/><circle id="s11-accept" cx="40" cy="90" r="24" fill="#2fb35a"/></g>
-      <g id="s11-talking" opacity="0"><text x="0" y="-60" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#fff">Danışıq</text><text id="s11-timer" x="0" y="-26" text-anchor="middle" font-family="AmrSub" font-weight="600" font-size="22" fill="#8fd3a8">00:00</text><circle cx="0" cy="90" r="24" fill="#d33a3a"/></g>
-      <g id="s11-ended" opacity="0"><text x="0" y="-40" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#ffb4b4">Zəng bitdi</text></g></g></g>`;
+      <g id="s11-talking" opacity="0"><text x="0" y="-60" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="27" fill="#fff">Baş İdarə</text><text id="s11-timer" x="0" y="-26" text-anchor="middle" font-family="AmrSub" font-weight="600" font-size="22" fill="#8fd3a8">00:00</text><circle cx="0" cy="90" r="24" fill="#d33a3a"/></g>
+      <g id="s11-ended" opacity="0"><text x="0" y="-60" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="27" fill="#fff">Baş İdarə</text><text x="0" y="-24" text-anchor="middle" font-family="AmrSub" font-weight="800" font-size="22" fill="#ffb4b4">Zəng bitdi</text></g></g></g>`;
   const html = `
     <div id="s11-trr" class="comic" style="left:1330px; top:280px; font-size:76px;">TRRRR!</div>
     <div id="s11-q" class="comic" style="left:1060px; top:230px; font-size:110px; color:#ff5a3a;">?!</div>
@@ -533,11 +533,10 @@ export function s17() {
     .map((ch) => `<span class="s17-l">${ch === " " ? "&nbsp;" : ch}</span>`)
     .join("");
   const html = `<div id="s17-t">${letters}</div>
-    <div id="s17-logo"><span class="schwa">e</span>MİRASLAN</div>`;
-  const css = `#s17-t { position: absolute; left: 0; right: 0; top: 400px; text-align: center; font-family: "AmrTitle"; font-size: 170px; color: #e2c46a; letter-spacing: 0.05em; text-shadow: 0 6px 0 #6b5420; }
+    <div id="s17-logo">ƏMİRASLAN</div>`;
+  const css = `#s17-t { position: absolute; left: 0; right: 0; top: 400px; text-align: center; font-family: "AmrTitle"; font-size: 150px; color: #e2c46a; letter-spacing: 0.03em; text-shadow: 0 6px 0 #6b5420; }
     .s17-l { display: inline-block; opacity: 0; }
-    #s17-logo { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-family: "AmrTitle"; font-size: 64px; color: #efe3c4; letter-spacing: 0.4em; opacity: 0; }
-    .schwa { display: inline-block; transform: translateY(-0.13em) rotate(180deg) scale(1.3, 1.5); transform-origin: 50% 60%; margin: 0 0.08em; }`;
+    #s17-logo { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-family: "AmrTitle"; font-size: 56px; color: #efe3c4; letter-spacing: 0.3em; opacity: 0; }`;
   const js = `
     tl.fromTo(".s17-l", { opacity: 0, y: 30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, stagger: 0.07, ease: "expo.out" }, 1.0);
     tl.fromTo("#s17-logo", { opacity: 0 }, { opacity: 0.85, duration: 0.8, ease: "power2.out" }, 2.4);
