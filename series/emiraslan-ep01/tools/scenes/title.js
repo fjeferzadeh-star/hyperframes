@@ -31,9 +31,9 @@ function draw(c, t) {
     c.textBaseline = "middle";
     c.lineWidth = 22;
     c.strokeStyle = T.INK;
-    c.strokeText("EMİRASLAN", 0, 0);
+    c.strokeText("ƏMİRASLAN", 0, 0);
     c.fillStyle = "#ffd23f";
-    c.fillText("EMİRASLAN", 0, 0);
+    c.fillText("ƏMİRASLAN", 0, 0);
     c.restore();
   }
   const b = pop(T.seg(t, 1.6, 2.1));

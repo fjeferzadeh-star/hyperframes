@@ -606,7 +606,7 @@
     if (opt.chaos) {
       // knocked-over stall and graffiti
       c.save();
-      c.translate(camX + 70, 700);
+      c.translate(camX + 1880, 760);
       c.scale(0.7, 0.7);
       c.rotate(-0.4);
       T.shape(c, "#8d6e4f", () => c.rect(-120, -60, 240, 60));

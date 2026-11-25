@@ -1,4 +1,4 @@
-# Emiraslan — 1-ci bölüm: Joker Team-in hücumu
+# Əmiraslan — 1-ci bölüm: Joker Team-in hücumu
 
 A 5:21 cartoon episode built with HyperFrames (1920×1080, 30 fps). Dialogue is shown as captions; characters move their mouths while they speak.
 
@@ -6,7 +6,7 @@ A 5:21 cartoon episode built with HyperFrames (1920×1080, 30 fps). Dialogue is 
 | ---- | ----------------------------------------------------------------- |
 | 0:00 | Title card                                                        |
 | 0:07 | 1. A quiet morning on the Baku boulevard — the Joker Team arrives |
-| 0:55 | 2. Captain Emiraslan at HQ: tea, the phone, the hero montage      |
+| 0:55 | 2. Captain Əmiraslan at HQ: tea, the phone, the hero montage      |
 | 1:40 | 3. In the car: the beautiful lady, the mirror, the radio          |
 | 2:32 | 4. The square: the confrontation and the fight                    |
 | 3:24 | 5. The trick: the giant screen, the captain's power, confetti     |
@@ -18,7 +18,7 @@ A 5:21 cartoon episode built with HyperFrames (1920×1080, 30 fps). Dialogue is 
 
 - `tools/episode.py` — scenes, every line of dialogue (with timing), sound effects and ambience. Edit text or timing here.
 - `tools/scenes/<id>.js` — the drawing code for each scene (shots, poses, camera).
-- `assets/lib/` — the shared toolkit: `core.js` (easing, flag, comic effects), `heads.js` (Emiraslan's head and the generic cartoon head), `rig.js` (body rig and the cast), `sets.js` (Baku panorama, boulevard, office, street, car, square).
+- `assets/lib/` — the shared toolkit: `core.js` (easing, flag, comic effects), `heads.js` (Əmiraslan's head and the generic cartoon head), `rig.js` (body rig and the cast), `sets.js` (Baku panorama, boulevard, office, street, car, square).
 - `python3 tools/build.py` regenerates `index.html`, `compositions/*.html` and `assets/lib/dialogue.js`. Run it after any edit.
 - `tools/make_beds.sh` regenerates the ambience beds (sea, room, car, crowd) from filtered noise.
 

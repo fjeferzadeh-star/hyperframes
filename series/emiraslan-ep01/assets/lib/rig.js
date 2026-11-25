@@ -451,7 +451,7 @@
 
   T.CAST = {
     emiraslan: {
-      name: "EMİRASLAN",
+      name: "ƏMİRASLAN",
       headFn: (c, o) => T.headEmiraslan(c, o),
       hs: 0.6,
       sw: 120,

@@ -1,4 +1,4 @@
-// SCENE 2. Captain Emiraslan at HQ: tea, a phone call, and the hero montage.
+// SCENE 2. Captain Əmiraslan at HQ: tea, a phone call, and the hero montage.
 const E = T.CAST.emiraslan;
 
 function radioRoom(c, t) {
@@ -68,7 +68,7 @@ function draw(c, t) {
         c.fillStyle = "#3b2a10";
         c.textAlign = "center";
         c.fillText("KAPİTAN", 960, 300);
-        c.fillText("EMİRASLAN", 960, 372);
+        c.fillText("ƏMİRASLAN", 960, 372);
         T.shape(c, "#c9a54f", () => c.arc(1290, 640, 26, 0, Math.PI * 2), 5);
         T.black(c, 1 - T.seg(lt, 0, 0.6));
       },

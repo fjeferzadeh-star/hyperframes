@@ -1,4 +1,4 @@
-/* Shared toolkit for the "Emiraslan" episodes: math, easing, and comic effects.
+/* Shared toolkit for the "Əmiraslan" episodes: math, easing, and comic effects.
    Everything is a pure function of the time passed in (seek-safe). */
 (function () {
   const T = (window.T = window.T || {});

@@ -1,4 +1,4 @@
-// End card: "EMİRASLAN GERİ QAYIDACAQ! — DAVAMI GƏLƏCƏK..."
+// End card: "ƏMİRASLAN GERİ QAYIDACAQ! — DAVAMI GƏLƏCƏK..."
 function draw(c, t) {
   c.setTransform(1, 0, 0, 1, 0, 0);
   c.fillStyle = "#0d2238";
@@ -20,9 +20,9 @@ function draw(c, t) {
     c.textBaseline = "middle";
     c.lineWidth = 18;
     c.strokeStyle = T.INK;
-    c.strokeText("EMİRASLAN GERİ QAYIDACAQ!", 0, 0);
+    c.strokeText("ƏMİRASLAN GERİ QAYIDACAQ!", 0, 0);
     c.fillStyle = "#ffd23f";
-    c.fillText("EMİRASLAN GERİ QAYIDACAQ!", 0, 0);
+    c.fillText("ƏMİRASLAN GERİ QAYIDACAQ!", 0, 0);
     c.restore();
   }
   const b = T.out3(T.seg(t, 1.4, 2.2));
